@@ -17,355 +17,300 @@
         <!-- Header End -->
 
 
-        <!-- Services Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">What We Do</h4>
-                    </div>
-                    <h1 class="display-3 mb-4">Our Service Given Physio Therapy By Expert</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Message Therapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
+
+<!-- Product Categories -->
+<!-- <div class="container-fluid py-4 bg-light">
+    <div class="container">
+        <div class="row g-3 justify-content-center">
+            <div class="col-auto">
+                <a href="#" class="btn btn-outline-primary rounded-pill">All Products</a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn btn-outline-primary rounded-pill">Whiteboard Animations</a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn btn-outline-primary rounded-pill">Book Trailers</a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn btn-outline-primary rounded-pill">Digital Products</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Products Grid -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
+                <div class="card product-card h-100 border-0">
+                    <div class="badge bg-danger text-white position-absolute m-2">SALE</div>
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Whiteboard Animation Package">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Animation</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Physiotherapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
+                        <h5 class="card-title">Whiteboard Animation Package</h5>
+                        <p class="card-text">60-second engaging animation for your book or brand</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$199</span>
+                                <small class="text-decoration-line-through text-muted ms-2">$249</small>
                             </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Heat & Cold Therapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Chiropatic Therapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Work Injuries</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Spot Injuries</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Regular Therapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Back Pain</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Services More</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Services End -->
 
-
-        <!-- Feature Start -->
-        <div class="container-fluid feature py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">Why Choose Us</h4>
-                    </div>
-                    <h1 class="display-3 mb-4">Why Choose Us? Get Your Life Style Back</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-diagnoses fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Licensed Therapist</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
+            <!-- Product 2 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card product-card h-100 border-0">
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Book Trailer Service">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Book Marketing</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-briefcase-medical fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Personalized Treatment</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
+                        <h5 class="card-title">Book Trailer Service</h5>
+                        <p class="card-text">Professional animated trailer for your book (90 seconds)</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$299</span>
                             </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-hospital-user fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Therapy Goals</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-users fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Practitioners Network</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-spa fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Comfortable Center</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-heart fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Experienced Stuff</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fab fa-pied-piper fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Therapy Goals</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="row-cols-1 feature-item p-4">
-                            <div class="col-12">
-                                <div class="feature-icon mb-4">
-                                    <div class="p-3 d-inline-flex bg-white rounded">
-                                        <i class="fas fa-user-md fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="feature-content d-flex flex-column">
-                                    <h5 class="mb-4">Licensed Therapist</h5>
-                                    <p class="mb-0">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Feature End -->
 
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="section-title mb-5">
-                    <div class="sub-style">
-                        <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
+            <!-- Product 3 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card product-card h-100 border-0">
+                    <div class="badge bg-success text-white position-absolute m-2">NEW</div>
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Creative Journaling Kit">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Digital Product</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Creative Journaling Kit</h5>
+                        <p class="card-text">100+ prompts and templates for daily inspiration</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$19.99</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
+                        </div>
                     </div>
-                    <h1 class="display-3 mb-4">What Clients are Say</h1>
                 </div>
-                <div class="testimonial-carousel owl-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-inner p-5">
-                            <div class="testimonial-inner-img mb-4">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-circle" alt="">
-                            </div>
-                            <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div class="text-center">
-                                <h5 class="mb-2">John Abraham</h5>
-                                <p class="mb-2 text-white-50">New York, USA</p>
-                                <div class="d-flex justify-content-center">
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card product-card h-100 border-0">
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Productivity Planner">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Digital Product</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-inner p-5">
-                            <div class="testimonial-inner-img mb-4">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-circle" alt="">
+                        <h5 class="card-title">Productivity Planner</h5>
+                        <p class="card-text">Daily/weekly planner templates for maximum efficiency</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$14.99</span>
                             </div>
-                            <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div class="text-center">
-                                <h5 class="mb-2">John Abraham</h5>
-                                <p class="mb-2 text-white-50">New York, USA</p>
-                                <div class="d-flex justify-content-center">
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                </div>
-                            </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
                         </div>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-inner p-5">
-                            <div class="testimonial-inner-img mb-4">
-                                <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-circle" alt="">
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
+                <div class="card product-card h-100 border-0">
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Animation Course">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Course</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
                             </div>
-                            <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div class="text-center">
-                                <h5 class="mb-2">John Abraham</h5>
-                                <p class="mb-2 text-white-50">New York, USA</p>
-                                <div class="d-flex justify-content-center">
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                    <i class="fas fa-star text-secondary"></i>
-                                </div>
+                        </div>
+                        <h5 class="card-title">DIY Animation Course</h5>
+                        <p class="card-text">Learn to create your own whiteboard animations</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$97</span>
                             </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card product-card h-100 border-0">
+                    <div class="badge bg-danger text-white position-absolute m-2">30% OFF</div>
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Author Branding Kit">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Templates</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Author Branding Kit</h5>
+                        <p class="card-text">Social media templates for authors (50+ designs)</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$29</span>
+                                <small class="text-decoration-line-through text-muted ms-2">$42</small>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card product-card h-100 border-0">
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Side Hustle Guide">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Ebook</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Side Hustle Guide</h5>
+                        <p class="card-text">150-page guide to starting your creative side business</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$9.99</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card product-card h-100 border-0">
+                    <div class="badge bg-success text-white position-absolute m-2">BESTSELLER</div>
+                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Premium Animation Package">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Animation</span>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Premium Animation Package</h5>
+                        <p class="card-text">2-minute animation with custom voiceover and music</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-primary h4">$399</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary">buy</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
+
+        <div class="text-center mt-5 wow fadeInUp">
+            <a href="#" class="btn btn-primary btn-lg px-5 py-3">View All Products</a>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="section-title text-center mb-5 wow fadeInUp">
+            <h2 class="display-4 mb-4">Why Shop With Us?</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 wow fadeInUp">
+                <div class="feature-box text-center p-4">
+                    <!-- <div class="feature-icon bg-primary text-white rounded-circle mb-4 mx-auto">
+                        <i class="fas fa-truck fa-2x"></i>
+                    </div> -->
+                    <h4>Instant Delivery</h4>
+                    <p>Digital products delivered immediately after purchase</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-box text-center p-4">
+                    <!-- <div class="feature-icon bg-primary text-white rounded-circle mb-4 mx-auto">
+                        <i class="fas fa-lock fa-2x"></i>
+                    </div> -->
+                    <h4>Secure Checkout</h4>
+                    <p>100% secure payment processing</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-box text-center p-4">
+                    <!-- <div class="feature-icon bg-primary text-white rounded-circle mb-4 mx-auto">
+                        <i class="fas fa-headset fa-2x"></i>
+                    </div> -->
+                    <h4>Customer Support</h4>
+                    <p>Dedicated support for all your questions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
 {% block extra_js %}
-
+<!-- Add any e-commerce specific JS here -->
 {% endblock %}
