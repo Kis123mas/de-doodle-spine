@@ -5,529 +5,550 @@
 
 {% block title %}Home - The Doodle Spine{% endblock %}
 
-    <style>
-        .portfolio-item {
-            transition: transform 0.3s;
-        }
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-        }
-        .skill-bar {
-            height: 10px;
-            border-radius: 5px;
-        }
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #0d6efd;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #0d6efd;
-            border: 2px solid white;
-        }
-    </style>
+<style>
+    .portfolio-item {
+        transition: transform 0.3s;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .skill-bar {
+        height: 10px;
+        border-radius: 5px;
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .timeline:before {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #0d6efd;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item:before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #0d6efd;
+        border: 2px solid white;
+    }
+</style>
 
 {% block content %}
-    
+
 
 
 
 
 <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">My Portfolio</h1>
-                   
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">My Portfolio</h1>
+
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- About Start -->
+<div id="about" class="container-fluid about bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-img pb-5 ps-5">
+                    <img src="{% static 'img/about-1.jpg' %}" class="img-fluid rounded w-100" style="object-fit: cover;"
+                        alt="The Doodle Spine workspace">
+                    <div class="about-img-inner">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle w-100 h-100"
+                            alt="Creative process image">
+                    </div>
+                    <div class="about-experience">8 years of creative storytelling</div>
+                </div>
+            </div>
+            <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+                <div class="section-title text-start mb-5">
+                    <h4 class="sub-title pe-3 mb-0">About The Doodle Spine</h4>
+                    <h1 class="display-5 mb-4">Creative Storytelling Through Animation & Design</h1>
+                    <p class="mb-4">
+                        I help authors, dreamers, and personal brands bring their stories to life through engaging
+                        whiteboard animations, inspiring book reviews, and delightful digital products.
+                    </p>
+                    <div class="mb-4">
+                        <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Whiteboard Animation – I
+                            create story-driven animations for books, authors, and personal brands.</p>
+                        <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Book Reviews & Trailers
+                            – I review fiction & inspiring non-fiction, turning them into shareable animated trailers.
+                        </p>
+                        <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Digital Products – I
+                            design cute, empowering downloads like journaling prompts and hustle guides for young,
+                            ambitious people.</p>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-phone text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h6>Call Me</h6>
+                                    <span>+123 456 7890</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-envelope text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h6>Email Me</h6>
+                                    <span>hello@thedoodlespine.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline-primary rounded-pill text-primary py-3 px-5">Let's
+                        Collaborate</a>
+                </div>
             </div>
         </div>
-        <!-- Header End -->
+    </div>
+</div>
+
+<!-- About End -->
 
 
-    <!-- About Start -->
-    <div id="about" class="container-fluid about bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="about-img pb-5 ps-5">
-                        <img src="img/about-1.jpg" class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
-                        <div class="about-img-inner">
-                            <img src="img/about-2.jpg" class="img-fluid rounded-circle w-100 h-100" alt="Image">
+<!-- Services Start -->
+<div id="services" class="container-fluid service py-5">
+    <div class="container py-5">
+        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="sub-style">
+                <h4 class="sub-title px-3 mb-0">What I Do</h4>
+            </div>
+            <h1 class="display-3 mb-4">My Creative Services</h1>
+            <p class="mb-0">I specialize in creating engaging visual content that brings stories to life and helps
+                brands connect with their audience.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Whiteboard Animation Service -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded">
+                    <div class="service-img rounded-top">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-top w-100"
+                            alt="Whiteboard Animation">
+                    </div>
+                    <div class="service-content rounded-bottom bg-light p-4">
+                        <div class="service-content-inner">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="mb-4">Whiteboard Animation</h5>
+                            <p class="mb-4">I create engaging, story-driven animations for books, authors, and personal
+                                brands that explain complex ideas in simple, visually appealing ways.</p>
+                            <a href="#whiteboard" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">See
+                                Examples</a>
                         </div>
-                        <div class="about-experience">8 years experience</div>
                     </div>
                 </div>
-                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
-                    <div class="section-title text-start mb-5">
-                        <h4 class="sub-title pe-3 mb-0">About Me</h4>
-                        <h1 class="display-3 mb-4">Professional Web Developer & Designer</h1>
-                        <p class="mb-4">I'm a passionate full-stack developer with expertise in creating modern web applications. With a strong foundation in both front-end and back-end technologies, I deliver comprehensive solutions that meet business objectives and user needs.</p>
-                        <div class="mb-4">
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> 50+ Completed Projects</p>
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> 100% Client Satisfaction</p>
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Modern & Responsive Design</p>
-                        </div>
-                        <div class="row g-3 mb-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                                        <i class="fa fa-phone text-white"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h6>Call Me</h6>
-                                        <span>+123 456 7890</span>
-                                    </div>
-                                </div>
+            </div>
+
+            <!-- Book Reviews & Trailers Service -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded">
+                    <div class="service-img rounded-top">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-top w-100"
+                            alt="Book Trailer">
+                    </div>
+                    <div class="service-content rounded-bottom bg-light p-4">
+                        <div class="service-content-inner">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-book-open fa-3x text-primary"></i>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                                        <i class="fa fa-envelope text-white"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h6>Email Me</h6>
-                                        <span>john.doe@example.com</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <h5 class="mb-4">Book Reviews & Trailers</h5>
+                            <p class="mb-4">I review books (mostly fiction and inspiring non-fiction) and turn them into
+                                short, animated trailers perfect for social media promotion.</p>
+                            <a href="#book-trailers" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View
+                                Samples</a>
                         </div>
-                        <!-- <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5 me-3">Download CV</a> -->
-                        <a href="#contact" class="btn btn-outline-primary rounded-pill text-primary py-3 px-5">Hire Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Products Service -->
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded">
+                    <div class="service-img rounded-top">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-top w-100"
+                            alt="Digital Products">
+                    </div>
+                    <div class="service-content rounded-bottom bg-light p-4">
+                        <div class="service-content-inner">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-gem fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="mb-4">Digital Products</h5>
+                            <p class="mb-4">I design and sell cute, empowering digital products (journaling prompts,
+                                phone/side hustle guides) targeted at young, ambitious people.</p>
+                            <a href="#digital-products"
+                                class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Browse Shop</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+<!-- Services End -->
 
-    <!-- Services Start -->
-    <div id="services" class="container-fluid service py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">What I Do</h4>
-                </div>
-                <h1 class="display-3 mb-4">My Professional Services</h1>
-                <p class="mb-0">I offer a comprehensive range of web development and design services to help your business establish a strong online presence and achieve your digital goals.</p>
-            </div>
+<!-- Portfolio Start -->
+<div id="portfolio" class="container-fluid blog py-5">
+    <div class="container py-5">
+        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="display-3 mb-4">My Work</h1>
+            <p class="mb-0">Here are some examples of my recent projects across different creative services.</p>
+        </div>
+
+        <!-- Whiteboard Animation Section -->
+        <div id="whiteboard" class="mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <h2 class="mb-4">Whiteboard Animation Projects</h2>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded">
-                       <div class="service-img rounded-top">
-                            <img src="img/service-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                       </div>
-                        <div class="service-content rounded-bottom bg-light p-4">
-                            <div class="service-content-inner">
-                                <div class="service-icon mb-3">
-                                    <i class="fas fa-laptop-code fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="mb-4">Web Development</h5>
-                                <p class="mb-4">Custom website development using modern technologies like React, Vue.js, and Node.js to create fast, scalable applications.</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item rounded">
+                        <div class="portfolio-img rounded-top">
+                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
+                                alt="Whiteboard Animation Sample">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content rounded-bottom bg-light p-4">
+                            <h5 class="mb-3">Author Book Explainer</h5>
+                            <p class="mb-2">Animated summary of a non-fiction book's key concepts for the author's
+                                marketing campaign.</p>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-primary me-2 mb-2">Storytelling</span>
+                                <span class="badge bg-primary me-2 mb-2">Animation</span>
+                                <span class="badge bg-primary me-2 mb-2">Scriptwriting</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded">
-                       <div class="service-img rounded-top">
-                            <img src="img/service-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                       </div>
-                        <div class="service-content rounded-bottom bg-light p-4">
-                            <div class="service-content-inner">
-                                <div class="service-icon mb-3">
-                                    <i class="fas fa-paint-brush fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="mb-4">UI/UX Design</h5>
-                                <p class="mb-4">User-centered design that focuses on creating intuitive, beautiful interfaces that enhance user experience and engagement.</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item rounded">
+                        <div class="portfolio-img rounded-top">
+                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
+                                alt="Whiteboard Animation Sample">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded">
-                       <div class="service-img rounded-top">
-                            <img src="img/service-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                       </div>
-                        <div class="service-content rounded-bottom bg-light p-4">
-                            <div class="service-content-inner">
-                                <div class="service-icon mb-3">
-                                    <i class="fas fa-mobile-alt fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="mb-4">Mobile Development</h5>
-                                <p class="mb-4">Cross-platform mobile app development using React Native and Flutter to reach users on both iOS and Android devices.</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                        <div class="portfolio-content rounded-bottom bg-light p-4">
+                            <h5 class="mb-3">Brand Story Animation</h5>
+                            <p class="mb-2">Engaging whiteboard video telling the origin story of a personal brand.</p>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-primary me-2 mb-2">Branding</span>
+                                <span class="badge bg-primary me-2 mb-2">Visual Storytelling</span>
+                                <span class="badge bg-primary me-2 mb-2">Marketing</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded">
-                       <div class="service-img rounded-top">
-                            <img src="img/service-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                       </div>
-                        <div class="service-content rounded-bottom bg-light p-4">
-                            <div class="service-content-inner">
-                                <div class="service-icon mb-3">
-                                    <i class="fas fa-search-dollar fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="mb-4">SEO Optimization</h5>
-                                <p class="mb-4">Comprehensive SEO strategies to improve your website's visibility and ranking on search engines like Google.</p>
-                                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#contact">Get All Services</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services End -->
-
-    <!-- Skills Start -->
-    <div class="container-fluid feature py-5 bg-light">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">My Skills</h4>
-                </div>
-                <h1 class="display-3 mb-4">Technical Expertise</h1>
-                <p class="mb-0">I've mastered a diverse set of technologies and tools to deliver comprehensive web solutions. Here's an overview of my technical skills.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="mb-4">
-                        <h5 class="mb-3">HTML/CSS</h5>
-                        <div class="progress bg-white">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="mb-3">JavaScript</h5>
-                        <div class="progress bg-white">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="mb-3">React.js</h5>
-                        <div class="progress bg-white">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="mb-4">
-                        <h5 class="mb-3">Node.js</h5>
-                        <div class="progress bg-white">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="mb-3">UI/UX Design</h5>
-                        <div class="progress bg-white">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h5 class="mb-3">Python/Django</h5>
-                        <div class="progress bg-white">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Skills End -->
 
-    <!-- Portfolio Start -->
-    <div id="portfolio" class="container-fluid blog py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">My Work</h4>
-                </div>
-                <h1 class="display-3 mb-4">Recent Projects</h1>
-                <p class="mb-0">Here are some of my latest projects that showcase my skills and expertise in web development and design.</p>
-            </div>
+        <!-- Book Trailers Section -->
+        <div id="book-trailers" class="mb-5 wow fadeInUp" data-wow-delay="0.3s">
+            <h2 class="mb-4">Book Reviews & Trailers</h2>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item rounded">
                         <div class="portfolio-img rounded-top">
-                            <img src="img/blog-1.jpg" class="img-fluid w-100 rounded-top" alt="Project Image">
+                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
+                                alt="Book Trailer Sample">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">E-Commerce Platform</h5>
-                            <p class="mb-2">A full-featured online store with payment integration, product management, and customer accounts.</p>
+                            <h5 class="mb-3">Fiction Book Trailer</h5>
+                            <p class="mb-2">Animated trailer for a fantasy novel that captured the book's magical
+                                atmosphere.</p>
                             <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">React</span>
-                                <span class="badge bg-primary me-2 mb-2">Node.js</span>
-                                <span class="badge bg-primary me-2 mb-2">MongoDB</span>
+                                <span class="badge bg-primary me-2 mb-2">Book Marketing</span>
+                                <span class="badge bg-primary me-2 mb-2">Animation</span>
+                                <span class="badge bg-primary me-2 mb-2">Review</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item rounded">
                         <div class="portfolio-img rounded-top">
-                            <img src="img/blog-2.jpg" class="img-fluid w-100 rounded-top" alt="Project Image">
+                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
+                                alt="Book Trailer Sample">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Healthcare Dashboard</h5>
-                            <p class="mb-2">A comprehensive healthcare management system for patient records, appointments, and analytics.</p>
+                            <h5 class="mb-3">Non-Fiction Book Summary</h5>
+                            <p class="mb-2">Animated review highlighting key takeaways from a self-help book.</p>
                             <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Vue.js</span>
-                                <span class="badge bg-primary me-2 mb-2">Python</span>
-                                <span class="badge bg-primary me-2 mb-2">PostgreSQL</span>
+                                <span class="badge bg-primary me-2 mb-2">Book Review</span>
+                                <span class="badge bg-primary me-2 mb-2">Educational</span>
+                                <span class="badge bg-primary me-2 mb-2">Social Media</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+            </div>
+        </div>
+
+        <!-- Digital Products Section -->
+        <div id="digital-products" class="wow fadeInUp" data-wow-delay="0.4s">
+            <h2 class="mb-4">Digital Products</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item rounded">
                         <div class="portfolio-img rounded-top">
-                            <img src="img/blog-3.jpg" class="img-fluid w-100 rounded-top" alt="Project Image">
+                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
+                                alt="Digital Product Sample">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Mobile Fitness App</h5>
-                            <p class="mb-2">A cross-platform fitness application with workout tracking, nutrition plans, and progress analytics.</p>
+                            <h5 class="mb-3">Journaling Prompts Bundle</h5>
+                            <p class="mb-2">30-day guided journal with creative prompts for self-reflection and growth.
+                            </p>
                             <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">React Native</span>
-                                <span class="badge bg-primary me-2 mb-2">Firebase</span>
-                                <span class="badge bg-primary me-2 mb-2">Redux</span>
+                                <span class="badge bg-primary me-2 mb-2">Self-Care</span>
+                                <span class="badge bg-primary me-2 mb-2">PDF Guide</span>
+                                <span class="badge bg-primary me-2 mb-2">Printable</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">View All Projects</a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item rounded">
+                        <div class="portfolio-img rounded-top">
+                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
+                                alt="Digital Product Sample">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
+                                        class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content rounded-bottom bg-light p-4">
+                            <h5 class="mb-3">Side Hustle Starter Kit</h5>
+                            <p class="mb-2">Step-by-step guide to launching a creative side business with templates.</p>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-primary me-2 mb-2">Entrepreneurship</span>
+                                <span class="badge bg-primary me-2 mb-2">Workbook</span>
+                                <span class="badge bg-primary me-2 mb-2">Planning</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Portfolio End -->
+</div>
+<!-- Portfolio End -->
 
-    <!-- Experience Start -->
-    <div id="experience" class="container-fluid team py-5 bg-light">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">My Journey</h4>
-                </div>
-                <h1 class="display-3 mb-4">Work Experience</h1>
-                <p class="mb-0">Here's a timeline of my professional journey and the roles I've held in the tech industry.</p>
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title mb-5">
+            <div class="sub-style">
+                <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4 class="mb-3">Senior Frontend Developer</h4>
-                            <h5 class="text-primary mb-3">TechSolutions Inc. | 2020 - Present</h5>
-                            <p>Leading a team of developers to create responsive web applications using React and modern JavaScript frameworks. Implementing best practices for performance optimization and accessibility.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4 class="mb-3">Full Stack Developer</h4>
-                            <h5 class="text-primary mb-3">Digital Creations | 2017 - 2020</h5>
-                            <p>Developed and maintained web applications using MERN stack. Collaborated with designers to implement UI/UX designs and with backend developers to integrate APIs.</p>
+            <h1 class="display-3 mb-4">What Clients Say</h1>
+        </div>
+        <div class="testimonial-carousel owl-carousel">
+            <div class="testimonial-item">
+                <div class="testimonial-inner p-5">
+                    <div class="testimonial-inner-img mb-4">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle" alt="Client">
+                    </div>
+                    <p class="text-white fs-7">"The whiteboard animation brought my book's concepts to life in ways I
+                        couldn't imagine. It perfectly captured the essence of my message and helped increase my book
+                        sales by 30%!"</p>
+                    <div class="text-center">
+                        <h5 class="mb-2">Sarah Johnson</h5>
+                        <p class="mb-2 text-white-50">Author, "Mindful Living"</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4 class="mb-3">Web Developer</h4>
-                            <h5 class="text-primary mb-3">Creative Web Studio | 2015 - 2017</h5>
-                            <p>Built custom WordPress themes and plugins for clients. Implemented responsive designs and optimized websites for performance and SEO.</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-inner p-5">
+                    <div class="testimonial-inner-img mb-4">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle" alt="Client">
+                    </div>
+                    <p class="text-white fs-7">"The book trailer was exactly what I needed for my social media campaign.
+                        It was professional, engaging, and captured the mood of my novel perfectly. Highly recommend!"
+                    </p>
+                    <div class="text-center">
+                        <h5 class="mb-2">Michael Chen</h5>
+                        <p class="mb-2 text-white-50">Author, "The Last Voyage"</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
                         </div>
-                        <div class="timeline-item">
-                            <h4 class="mb-3">Junior Developer</h4>
-                            <h5 class="text-primary mb-3">StartUp Ventures | 2013 - 2015</h5>
-                            <p>Assisted in developing and maintaining company websites. Learned fundamentals of web development and worked with HTML, CSS, and basic JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-inner p-5">
+                    <div class="testimonial-inner-img mb-4">
+                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle" alt="Client">
+                    </div>
+                    <p class="text-white fs-7">"The journaling prompts have transformed my morning routine. Beautifully
+                        designed and thoughtfully created - exactly what my audience loves. Will definitely order more
+                        products!"</p>
+                    <div class="text-center">
+                        <h5 class="mb-2">Emily Rodriguez</h5>
+                        <p class="mb-2 text-white-50">Wellness Coach</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Experience End -->
+</div>
+<!-- Testimonial End -->
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title mb-5">
-                <div class="sub-style">
-                    <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
-                </div>
-                <h1 class="display-3 mb-4">What Clients Say</h1>
-            </div>
-            <div class="testimonial-carousel owl-carousel">
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">"John transformed our outdated website into a modern, user-friendly platform that has significantly increased our online conversions. His attention to detail and technical expertise were impressive throughout the project."
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">Sarah Johnson</h5>
-                            <p class="mb-2 text-white-50">CEO, Retail Solutions</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
+<!-- Contact Start -->
+<div id="contact" class="container-fluid appointment py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+                <div class="section-title text-start">
+                    <h4 class="sub-title pe-3 mb-0">Let's Connect</h4>
+                    <h1 class="display-4 mb-4">Ready to Bring Your Story to Life?</h1>
+                    <p class="mb-4">Whether you're an author needing a book trailer, a brand wanting an explainer video,
+                        or just love my digital products, I'd love to hear from you!</p>
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column h-100">
+                                <div class="mb-4">
+                                    <h5 class="mb-3"><i class="fa fa-envelope text-primary me-2"></i> Email Me</h5>
+                                    <p class="mb-0">hello@thedoodlespine.com</p>
+                                </div>
+                                <div class="mb-4">
+                                    <h5 class="mb-3"><i class="fa fa-phone text-primary me-2"></i> Call Me</h5>
+                                    <p class="mb-0">+1 (555) 123-4567</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">"Working with John was a pleasure. He delivered our mobile app ahead of schedule and under budget. His communication was excellent, and he took the time to understand our business needs thoroughly."
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">Michael Chen</h5>
-                            <p class="mb-2 text-white-50">CTO, HealthTech Inc.</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">"John's design skills are exceptional. He created a beautiful, intuitive interface for our SaaS product that our users love. He's responsive, professional, and truly understands how to balance aesthetics with functionality."
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">Emily Rodriguez</h5>
-                            <p class="mb-2 text-white-50">Product Manager, CloudSoft</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column h-100">
+                                <div class="mb-4">
+                                    <h5 class="mb-3"><i class="fa fa-shopping-cart text-primary me-2"></i> My Shop</h5>
+                                    <p class="mb-0">shop.thedoodlespine.com</p>
+                                </div>
+                                <div class="mb-4">
+                                    <h5 class="mb-3"><i class="fab fa-youtube text-primary me-2"></i> YouTube</h5>
+                                    <p class="mb-0">youtube.com/thedoodlespine</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-    <!-- Contact Start -->
-    <div id="contact" class="container-fluid appointment py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                    <div class="section-title text-start">
-                        <h4 class="sub-title pe-3 mb-0">Let's Connect</h4>
-                        <h1 class="display-4 mb-4">Ready to Start Your Project?</h1>
-                        <p class="mb-4">Whether you have a question about my services, want to discuss a potential project, or just want to say hello, I'd love to hear from you. Fill out the form and I'll get back to you as soon as possible.</p>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-envelope text-primary me-2"></i> Email Me</h5>
-                                        <p class="mb-0">john.doe@example.com</p>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-phone text-primary me-2"></i> Call Me</h5>
-                                        <p class="mb-0">+123 456 7890</p>
-                                    </div>
-                                </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+                <div class="appointment-form rounded p-5">
+                    <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
+                    <h1 class="display-5 mb-4">Contact Me</h1>
+                    <form>
+                        <div class="row gy-3 gx-4">
+                            <div class="col-xl-6">
+                                <input type="text" class="form-control py-3 border-primary bg-transparent text-white"
+                                    placeholder="Your Name">
                             </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-map-marker-alt text-primary me-2"></i> Location</h5>
-                                        <p class="mb-0">San Francisco, CA</p>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-clock text-primary me-2"></i> Availability</h5>
-                                        <p class="mb-0">Mon-Fri: 9AM - 6PM</p>
-                                    </div>
-                                </div>
+                            <div class="col-xl-6">
+                                <input type="email" class="form-control py-3 border-primary bg-transparent text-white"
+                                    placeholder="Your Email">
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select py-3 border-primary bg-transparent text-white">
+                                    <option selected>What service are you interested in?</option>
+                                    <option>Whiteboard Animation</option>
+                                    <option>Book Trailer</option>
+                                    <option>Book Review</option>
+                                    <option>Digital Products</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control border-primary bg-transparent text-white" name="message"
+                                    id="message" cols="30" rows="5" placeholder="Tell me about your project"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">SEND
+                                    MESSAGE</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-                    <div class="appointment-form rounded p-5">
-                        <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
-                        <h1 class="display-5 mb-4">Contact Me</h1>
-                        <form>
-                            <div class="row gy-3 gx-4">
-                                <div class="col-xl-6">
-                                    <input type="text" class="form-control py-3 border-primary bg-transparent text-white" placeholder="Your Name">
-                                </div>
-                                <div class="col-xl-6">
-                                    <input type="email" class="form-control py-3 border-primary bg-transparent text-white" placeholder="Your Email">
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control py-3 border-primary bg-transparent text-white" placeholder="Subject">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-primary bg-transparent text-white" name="message" id="message" cols="30" rows="5" placeholder="Your Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">SEND MESSAGE</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Contact End -->
 
 {% endblock %}
 
 {% block extra_js %}
-
 {% endblock %}
