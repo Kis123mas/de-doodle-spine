@@ -119,6 +119,7 @@ USE_TZ = True
 
 # static configuration for styling
 # Add these at the bottom of your settings.py
+
 STATIC_URL = '/static/'
 
 # For development only - where Django will collect static files during development

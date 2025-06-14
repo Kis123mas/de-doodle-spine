@@ -46,7 +46,7 @@
             <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded">
                    <div class="service-img rounded-top">
-                        <img src="{% static 'img/service-1.jpg' %}" class="img-fluid rounded-top w-100" alt="Whiteboard animation example">
+                        <img src="{% static 'img/whiteboard.jpeg' %}" class="img-fluid rounded-top w-100" alt="Whiteboard animation example">
                    </div>
                     <div class="service-content rounded-bottom bg-light p-4">
                         <div class="service-content-inner">
@@ -55,11 +55,7 @@
                             </div>
                             <h5 class="mb-4">Whiteboard Animation</h5>
                             <p class="mb-4">I create engaging, story-driven animations for books, authors, and personal brands that explain complex ideas simply and memorably.</p>
-                            <div class="d-flex flex-wrap mb-3">
-                                <span class="badge bg-primary me-2 mb-2">Storytelling</span>
-                                <span class="badge bg-primary me-2 mb-2">Animation</span>
-                                <span class="badge bg-primary me-2 mb-2">Marketing</span>
-                            </div>
+                           
                             <a href="{% url 'portfolio' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Portfolio</a>
                         </div>
                     </div>
@@ -70,7 +66,7 @@
             <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item rounded">
                    <div class="service-img rounded-top">
-                        <img src="{% static 'img/service-2.jpg' %}" class="img-fluid rounded-top w-100" alt="Book trailer example">
+                        <img src="{% static 'img/booktrailer.png' %}" class="img-fluid rounded-top w-100" alt="Book trailer example">
                    </div>
                     <div class="service-content rounded-bottom bg-light p-4">
                         <div class="service-content-inner">
@@ -79,11 +75,7 @@
                             </div>
                             <h5 class="mb-4">Book Reviews & Trailers</h5>
                             <p class="mb-4">I review books (mostly fiction and inspiring non-fiction) and turn them into short, animated trailers perfect for social media promotion.</p>
-                            <div class="d-flex flex-wrap mb-3">
-                                <span class="badge bg-primary me-2 mb-2">Reviews</span>
-                                <span class="badge bg-primary me-2 mb-2">Trailers</span>
-                                <span class="badge bg-primary me-2 mb-2">Promotion</span>
-                            </div>
+                           
                             <a href="{% url 'blog' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">See Examples</a>
                         </div>
                     </div>
@@ -94,7 +86,7 @@
             <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item rounded">
                    <div class="service-img rounded-top">
-                        <img src="{% static 'img/service-3.jpg' %}" class="img-fluid rounded-top w-100" alt="Digital products example">
+                        <img src="{% static 'img/digit.jpeg' %}" class="img-fluid rounded-top w-100" alt="Digital products example">
                    </div>
                     <div class="service-content rounded-bottom bg-light p-4">
                         <div class="service-content-inner">
@@ -103,11 +95,7 @@
                             </div>
                             <h5 class="mb-4">Digital Products</h5>
                             <p class="mb-4">I design and sell cute, empowering digital products (e.g., journaling prompts, phone/side hustle guides) targeted at young, ambitious people.</p>
-                            <div class="d-flex flex-wrap mb-3">
-                                <span class="badge bg-primary me-2 mb-2">Design</span>
-                                <span class="badge bg-primary me-2 mb-2">Downloads</span>
-                                <span class="badge bg-primary me-2 mb-2">Resources</span>
-                            </div>
+                          
                             <a href="{% url 'product' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Shop Products</a>
                         </div>
                     </div>
@@ -229,72 +217,6 @@
 </div>
 <!-- Feature End -->
 
-<!-- Portfolio/Work Samples Section -->
-<div class="container-fluid blog py-5 bg-light">
-    <div class="container py-5">
-        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h4 class="sub-title px-3 mb-0">Recent Work</h4>
-            </div>
-            <h1 class="display-3 mb-4">Featured Projects</h1>
-            <p class="mb-0">A selection of recent animations, book trailers, and digital products I've created.</p>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-item rounded">
-                    <div class="portfolio-img rounded-top">
-                        <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="Whiteboard animation project">
-                        
-                    </div>
-                    <div class="portfolio-content rounded-bottom bg-white p-4">
-                        <h5 class="mb-3">Author Brand Animation</h5>
-                        <p class="mb-2">Whiteboard animation for a personal development author explaining their core philosophy.</p>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge bg-primary me-2 mb-2">Animation</span>
-                            <span class="badge bg-primary me-2 mb-2">Storytelling</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-item rounded">
-                    <div class="portfolio-img rounded-top">
-                        <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded-top" alt="Book trailer project">
-                      
-                    </div>
-                    <div class="portfolio-content rounded-bottom bg-white p-4">
-                        <h5 class="mb-3">Fiction Book Trailer</h5>
-                        <p class="mb-2">Animated trailer for a fantasy novel that increased pre-orders by 35%.</p>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge bg-primary me-2 mb-2">Book Marketing</span>
-                            <span class="badge bg-primary me-2 mb-2">Animation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-item rounded">
-                    <div class="portfolio-img rounded-top">
-                        <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded-top" alt="Digital product example">
-                    
-                    </div>
-                    <div class="portfolio-content rounded-bottom bg-white p-4">
-                        <h5 class="mb-3">Goal Setting Journal</h5>
-                        <p class="mb-2">Digital journal with prompts and exercises to help users achieve their goals.</p>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge bg-primary me-2 mb-2">Digital Product</span>
-                            <span class="badge bg-primary me-2 mb-2">Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="{% url 'portfolio' %}">View All Projects</a>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Testimonial Start -->
 <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
     <div class="container py-5">
@@ -310,19 +232,8 @@
                     <!-- <div class="testimonial-inner-img mb-4">
                         <img src="{% static 'img/testimonial-img.jpg' %}" class="img-fluid rounded-circle" alt="Client testimonial">
                     </div> -->
-                    <p class="text-white fs-7">"The whiteboard animation created for my book launch perfectly captured the essence of my message. It helped explain my complex ideas in a simple, engaging way that resonated with my audience. The animation was shared widely on social media and definitely contributed to my book's success."
+                    <p class="text-white fs-7">“The whiteboard animation created for my book launch perfectly captured the essence of my message. It helped explain my complex ideas in a simple, engaging way that resonated with my audience. The animation was shared widely on social media and definitely contributed to my book's success.”
                     </p>
-                    <div class="text-center">
-                        <h5 class="mb-2">Sarah Johnson</h5>
-                        <p class="mb-2 text-white-50">Author, "Mindful Productivity"</p>
-                        <div class="d-flex justify-content-center">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="testimonial-item">
@@ -330,39 +241,14 @@
                     <!-- <div class="testimonial-inner-img mb-4">
                         <img src="{% static 'img/testimonial-img.jpg' %}" class="img-fluid rounded-circle" alt="Client testimonial">
                     </div> -->
-                    <p class="text-white fs-7">"Our book trailer received so much positive feedback from readers and booksellers alike. It captured the mood of our novel perfectly and helped generate buzz before publication. The attention to detail and understanding of our story was exceptional."
+                    <p class="text-white fs-7">“We needed a powerful, visual way to share our community impact story — and The Doodle Spine delivered beyond our expectations. The animation sparked conversations, made our message more relatable, and increased engagement with our campaign by over 60%. Uplift Rural Voices Initiative
                     </p>
-                    <div class="text-center">
-                        <h5 class="mb-2">Michael Chen</h5>
-                        <p class="mb-2 text-white-50">Publishing Director, StoryForge Press</p>
-                        <div class="d-flex justify-content-center">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="testimonial-item">
                 <div class="testimonial-inner p-5">
-                    <!-- <div class="testimonial-inner-img mb-4">
-                        <img src="{% static 'img/testimonial-img.jpg' %}" class="img-fluid rounded-circle" alt="Client testimonial">
-                    </div> -->
-                    <p class="text-white fs-7">"The journaling prompts and guides I purchased have become an essential part of my morning routine. The design is beautiful and the content is genuinely helpful - it's clear they were created with care and understanding of what young professionals need to stay motivated and organized."
+                    <p class="text-white fs-7">"As an educator, it’s tough to keep online learners engaged — but the animation The Doodle Spine produced turned one of my driest modules into a favorite. Students said it helped them grasp the topic faster and actually made them smile while learning. That’s priceless."
                     </p>
-                    <div class="text-center">
-                        <h5 class="mb-2">Emily Rodriguez</h5>
-                        <p class="mb-2 text-white-50">Digital Product Customer</p>
-                        <div class="d-flex justify-content-center">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -387,7 +273,7 @@
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
                 <div class="video h-100">
                     <!-- <img src="{% static 'img/doodlelogo.png' %}" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="Preview of work"> -->
-                    <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                    <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://youtube.com/@thedoodlespine?si=AFkDlz8VXP80_XlX" data-bs-target="#videoModal">
                         <span></span>
                     </button>
                 </div>
