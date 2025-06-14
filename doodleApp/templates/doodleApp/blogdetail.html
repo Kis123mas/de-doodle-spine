@@ -1,7 +1,7 @@
 {% extends 'doodleApp/main.html' %}
 {% load static %}
 
-{% block title %}Blog Detail - The Doodle Spine{% endblock %}
+{% block title %}{{ post.title }} - The Doodle Spine{% endblock %}
 
 {% block content %}
 
@@ -20,74 +20,32 @@
             <!-- Blog Content -->
             <div class="col-lg-8">
                 <div class="blog-detail-item">
-                    <img src="{% static 'img/blog-detail.jpg' %}" class="img-fluid rounded mb-4 w-100" alt="Blog Cover Image">
+                    {% if post.image %}
+                        <img src="{{ post.image.url }}" class="img-fluid rounded mb-4 w-100" alt="{{ post.title }}">
+                    {% else %}
+                        <img src="{% static 'img/blog-detail.jpg' %}" class="img-fluid rounded mb-4 w-100" alt="Default Blog Image">
+                    {% endif %}
 
                     <div class="mb-4">
-                        <h1 class="display-4 mb-3">Finding Your Voice as a Writer</h1>
-                        <p class="text-muted"><i class="fa fa-calendar-alt text-primary me-2"></i>08 June 2025 | <i class="fa fa-user text-primary me-2 ms-3"></i>By Jane Editor</p>
+                        <h1 class="display-4 mb-3">{{ post.title }}</h1>
+                        <p class="text-muted">
+                            <i class="fa fa-calendar-alt text-primary me-2"></i>{{ post.created_at|date:"d F Y" }}
+                            {% if post.author %} | <i class="fa fa-user text-primary me-2 ms-3"></i>By {{ post.author.get_full_name|default:post.author.username }}{% endif %}
+                        </p>
                     </div>
 
-                    <p class="mb-4">Your voice is the soul of your writing—it’s what makes your words uniquely yours. But finding it doesn’t always come easy...</p>
+                    <p class="mb-4">{{ post.excerpt }}</p>
 
-                    <blockquote class="border-start border-4 border-primary ps-4 mb-4">
-                        <em>"Finding your voice means discovering the rhythm and honesty in your words that cannot be mistaken for anyone else’s." — Jane Editor</em>
-                    </blockquote>
+                    {% if post.quote %}
+                        <blockquote class="border-start border-4 border-primary ps-4 mb-4">
+                            <em>"{{ post.quote }}"</em>
+                        </blockquote>
+                    {% endif %}
 
-                    <p class="mb-5">Above all, trust your instincts. Voice isn’t something you find overnight, but with time, patience, and a good editor by your side, it will begin to shine through in every sentence.</p>
+                    <p class="mb-5">{{ post.body|linebreaks }}</p>
                 </div>
 
-                <!-- Existing Comments -->
-                <div class="mt-5">
-                    <h4 class="mb-4">3 Comments</h4>
 
-                    <!-- Comment 1 -->
-                    <div class="d-flex mb-4">
-                        <img src="{% static 'img/user1.jpg' %}" class="rounded-circle me-3" alt="User 1" style="width: 60px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h6 class="mb-1">Emily Rose <small class="text-muted">| 08 June 2025</small></h6>
-                            <p class="mb-0">This post resonated with me deeply. Finding your voice is indeed a journey. Thanks for the inspiration!</p>
-                        </div>
-                    </div>
-
-                    <!-- Comment 2 -->
-                    <div class="d-flex mb-4">
-                        <img src="{% static 'img/user2.jpg' %}" class="rounded-circle me-3" alt="User 2" style="width: 60px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h6 class="mb-1">Michael Hart <small class="text-muted">| 07 June 2025</small></h6>
-                            <p class="mb-0">Great read! I’m currently working on my first book and this gave me clarity on staying authentic.</p>
-                        </div>
-                    </div>
-
-                    <!-- Comment 3 -->
-                    <div class="d-flex mb-4">
-                        <img src="{% static 'img/user3.jpg' %}" class="rounded-circle me-3" alt="User 3" style="width: 60px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h6 class="mb-1">Linda Kay <small class="text-muted">| 06 June 2025</small></h6>
-                            <p class="mb-0">Love this! I struggle with consistency in my tone, but this post reminded me it's a process.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Leave a Comment -->
-                <div class="mt-5">
-                    <h4 class="mb-4">Leave a Comment</h4>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Write a comment..."></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary rounded-pill text-white py-3 px-5" type="submit">Post Comment</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
 
             <!-- Sidebar for Other Posts -->
@@ -95,38 +53,19 @@
                 <div class="bg-light rounded p-4 shadow-sm">
                     <h4 class="mb-4">Other Blog Posts</h4>
 
+                    {% for item in recent_posts %}
                     <div class="d-flex mb-3">
-                        <img src="{% static 'img/blog-1.jpg' %}" class="flex-shrink-0 rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Post 1">
+                        {% if item.image %}
+                            <img src="{{ item.image.url }}" class="flex-shrink-0 rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="{{ item.title }}">
+                        {% else %}
+                            <img src="{% static 'img/blog-1.jpg' %}" class="flex-shrink-0 rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Post Image">
+                        {% endif %}
                         <div class="ps-3">
-                            <a href="#" class="h6 d-block text-dark mb-1">5 Tips for Daily Journaling</a>
-                            <small class="text-muted"><i class="fa fa-calendar-alt text-primary me-1"></i>01 June 2025</small>
+                            <a href="{% url 'blog-detail' item.slug %}" class="h6 d-block text-dark mb-1">{{ item.title|truncatechars:40 }}</a>
+                            <small class="text-muted"><i class="fa fa-calendar-alt text-primary me-1"></i>{{ item.created_at|date:"d M Y" }}</small>
                         </div>
                     </div>
-
-                    <div class="d-flex mb-3">
-                        <img src="{% static 'img/blog-2.jpg' %}" class="flex-shrink-0 rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Post 2">
-                        <div class="ps-3">
-                            <a href="#" class="h6 d-block text-dark mb-1">How to Overcome Writer’s Block</a>
-                            <small class="text-muted"><i class="fa fa-calendar-alt text-primary me-1"></i>27 May 2025</small>
-                        </div>
-                    </div>
-
-                    <div class="d-flex mb-3">
-                        <img src="{% static 'img/blog-3.jpg' %}" class="flex-shrink-0 rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Post 3">
-                        <div class="ps-3">
-                            <a href="#" class="h6 d-block text-dark mb-1">Crafting Stories That Matter</a>
-                            <small class="text-muted"><i class="fa fa-calendar-alt text-primary me-1"></i>20 May 2025</small>
-                        </div>
-                    </div>
-
-                    <div class="d-flex mb-3">
-                        <img src="{% static 'img/blog-4.jpg' %}" class="flex-shrink-0 rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Post 4">
-                        <div class="ps-3">
-                            <a href="#" class="h6 d-block text-dark mb-1">Writing with Authenticity</a>
-                            <small class="text-muted"><i class="fa fa-calendar-alt text-primary me-1"></i>15 May 2025</small>
-                        </div>
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </div>

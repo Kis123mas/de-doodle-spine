@@ -52,18 +52,20 @@
     }
 </style>
 
+
 {% block content %}
-
-
-
 
 
 <!-- Header Start -->
 <div class="container-fluid bg-breadcrumb">
     <div class="container text-center py-5" style="max-width: 900px;">
-        <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">My Portfolio</h1>
+        <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">My Portfolio</h3>
+        <p class="text-white fs-5 mb-0 wow fadeInUp" data-wow-delay="0.2s">
+            Explore a curated collection of my creative projects, showcasing storytelling, animation, and visual innovation.
+        </p>
     </div>
 </div>
+
 <!-- Header End -->
 
 
@@ -225,327 +227,50 @@
             <p class="mb-0">Here are some examples of my recent projects across different creative services.</p>
         </div>
 
-        <!-- Whiteboard Animation Section -->
-        <div id="whiteboard" class="mb-5 wow fadeInUp" data-wow-delay="0.2s">
-            <h2 class="mb-4">Whiteboard Animation Projects</h2>
+        {% if items_by_category %}
+    {% for category in items_by_category %}
+        <div id="{{ category.slug }}" class="mb-5 wow fadeInUp">
+            <h2 class="mb-4">{{ category.name }}</h2>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item rounded">
-                        <div class="portfolio-img rounded-top">
-                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
-                                alt="Whiteboard Animation Sample">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-link"></i></a>
+                {% if category.items %}
+                    {% for item in category.items %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item rounded">
+                            <div class="portfolio-img rounded-top">
+                                <img src="{{ item.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ item.title }}">
                             </div>
-                        </div>
-                        <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Author Book Explainer</h5>
-                            <p class="mb-2">Animated summary of a non-fiction book's key concepts for the author's
-                                marketing campaign.</p>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Storytelling</span>
-                                <span class="badge bg-primary me-2 mb-2">Animation</span>
-                                <span class="badge bg-primary me-2 mb-2">Scriptwriting</span>
+                            <div class="portfolio-content rounded-bottom bg-light p-4">
+                                <h5 class="mb-3">{{ item.title }}</h5>
+                                <p class="mb-2">{{ item.description }}</p>
+                                <div class="d-flex flex-wrap">
+                                    {% for tag in item.tags.all %}
+                                        <span class="badge bg-primary me-2 mb-2">{{ tag.name }}</span>
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item rounded">
-                        <div class="portfolio-img rounded-top">
-                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
-                                alt="Whiteboard Animation Sample">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Brand Story Animation</h5>
-                            <p class="mb-2">Engaging whiteboard video telling the origin story of a personal brand.</p>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Branding</span>
-                                <span class="badge bg-primary me-2 mb-2">Visual Storytelling</span>
-                                <span class="badge bg-primary me-2 mb-2">Marketing</span>
-                            </div>
-                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="text-center text-muted py-4">
+                        <p>No works available in this category.</p>
                     </div>
-                </div>
+                {% endif %}
             </div>
         </div>
+    {% endfor %}
+{% else %}
+    <div class="text-center text-muted py-5">
+        <h4>No works for now.</h4>
+    </div>
+{% endif %}
 
-        <!-- Book Trailers Section -->
-        <div id="book-trailers" class="mb-5 wow fadeInUp" data-wow-delay="0.3s">
-            <h2 class="mb-4">Book Reviews & Trailers</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item rounded">
-                        <div class="portfolio-img rounded-top">
-                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
-                                alt="Book Trailer Sample">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Fiction Book Trailer</h5>
-                            <p class="mb-2">Animated trailer for a fantasy novel that captured the book's magical
-                                atmosphere.</p>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Book Marketing</span>
-                                <span class="badge bg-primary me-2 mb-2">Animation</span>
-                                <span class="badge bg-primary me-2 mb-2">Review</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item rounded">
-                        <div class="portfolio-img rounded-top">
-                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
-                                alt="Book Trailer Sample">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Non-Fiction Book Summary</h5>
-                            <p class="mb-2">Animated review highlighting key takeaways from a self-help book.</p>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Book Review</span>
-                                <span class="badge bg-primary me-2 mb-2">Educational</span>
-                                <span class="badge bg-primary me-2 mb-2">Social Media</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Digital Products Section -->
-        <div id="digital-products" class="wow fadeInUp" data-wow-delay="0.4s">
-            <h2 class="mb-4">Digital Products</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item rounded">
-                        <div class="portfolio-img rounded-top">
-                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
-                                alt="Digital Product Sample">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Journaling Prompts Bundle</h5>
-                            <p class="mb-2">30-day guided journal with creative prompts for self-reflection and growth.
-                            </p>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Self-Care</span>
-                                <span class="badge bg-primary me-2 mb-2">PDF Guide</span>
-                                <span class="badge bg-primary me-2 mb-2">Printable</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item rounded">
-                        <div class="portfolio-img rounded-top">
-                            <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-top"
-                                alt="Digital Product Sample">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i
-                                        class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content rounded-bottom bg-light p-4">
-                            <h5 class="mb-3">Side Hustle Starter Kit</h5>
-                            <p class="mb-2">Step-by-step guide to launching a creative side business with templates.</p>
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-primary me-2 mb-2">Entrepreneurship</span>
-                                <span class="badge bg-primary me-2 mb-2">Workbook</span>
-                                <span class="badge bg-primary me-2 mb-2">Planning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+
 <!-- Portfolio End -->
 
-<!-- Testimonial Start -->
-<div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-title mb-5">
-            <div class="sub-style">
-                <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
-            </div>
-            <h1 class="display-3 mb-4">What Clients Say</h1>
-        </div>
-        <div class="testimonial-carousel owl-carousel">
-            <div class="testimonial-item">
-                <div class="testimonial-inner p-5">
-                    <div class="testimonial-inner-img mb-4">
-                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle" alt="Client">
-                    </div>
-                    <p class="text-white fs-7">"The whiteboard animation brought my book's concepts to life in ways I
-                        couldn't imagine. It perfectly captured the essence of my message and helped increase my book
-                        sales by 30%!"</p>
-                    <div class="text-center">
-                        <h5 class="mb-2">Sarah Johnson</h5>
-                        <p class="mb-2 text-white-50">Author, "Mindful Living"</p>
-                        <div class="d-flex justify-content-center">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-inner p-5">
-                    <div class="testimonial-inner-img mb-4">
-                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle" alt="Client">
-                    </div>
-                    <p class="text-white fs-7">"The book trailer was exactly what I needed for my social media campaign.
-                        It was professional, engaging, and captured the mood of my novel perfectly. Highly recommend!"
-                    </p>
-                    <div class="text-center">
-                        <h5 class="mb-2">Michael Chen</h5>
-                        <p class="mb-2 text-white-50">Author, "The Last Voyage"</p>
-                        <div class="d-flex justify-content-center">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-inner p-5">
-                    <div class="testimonial-inner-img mb-4">
-                        <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle" alt="Client">
-                    </div>
-                    <p class="text-white fs-7">"The journaling prompts have transformed my morning routine. Beautifully
-                        designed and thoughtfully created - exactly what my audience loves. Will definitely order more
-                        products!"</p>
-                    <div class="text-center">
-                        <h5 class="mb-2">Emily Rodriguez</h5>
-                        <p class="mb-2 text-white-50">Wellness Coach</p>
-                        <div class="d-flex justify-content-center">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
 
-<!-- Contact Start -->
-<div id="contact" class="container-fluid appointment py-5">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                <div class="section-title text-start">
-                    <h4 class="sub-title pe-3 mb-0">Let's Connect</h4>
-                    <h1 class="display-4 mb-4">Ready to Bring Your Story to Life?</h1>
-                    <p class="mb-4">Whether you're an author needing a book trailer, a brand wanting an explainer video,
-                        or just love my digital products, I'd love to hear from you!</p>
-                    <div class="row g-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex flex-column h-100">
-                                <div class="mb-4">
-                                    <h5 class="mb-3"><i class="fa fa-envelope text-primary me-2"></i> Email Me</h5>
-                                    <p class="mb-0">hello@thedoodlespine.com</p>
-                                </div>
-                                <div class="mb-4">
-                                    <h5 class="mb-3"><i class="fa fa-phone text-primary me-2"></i> Call Me</h5>
-                                    <p class="mb-0">+1 (555) 123-4567</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex flex-column h-100">
-                                <div class="mb-4">
-                                    <h5 class="mb-3"><i class="fa fa-shopping-cart text-primary me-2"></i> My Shop</h5>
-                                    <p class="mb-0">shop.thedoodlespine.com</p>
-                                </div>
-                                <div class="mb-4">
-                                    <h5 class="mb-3"><i class="fab fa-youtube text-primary me-2"></i> YouTube</h5>
-                                    <p class="mb-0">youtube.com/thedoodlespine</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-                <div class="appointment-form rounded p-5">
-                    <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
-                    <h1 class="display-5 mb-4">Contact Me</h1>
-                    <form>
-                        <div class="row gy-3 gx-4">
-                            <div class="col-xl-6">
-                                <input type="text" class="form-control py-3 border-primary bg-transparent text-white"
-                                    placeholder="Your Name">
-                            </div>
-                            <div class="col-xl-6">
-                                <input type="email" class="form-control py-3 border-primary bg-transparent text-white"
-                                    placeholder="Your Email">
-                            </div>
-                            <div class="col-12">
-                                <select class="form-select py-3 border-primary bg-transparent text-white">
-                                    <option selected>What service are you interested in?</option>
-                                    <option>Whiteboard Animation</option>
-                                    <option>Book Trailer</option>
-                                    <option>Book Review</option>
-                                    <option>Digital Products</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control border-primary bg-transparent text-white" name="message"
-                                    id="message" cols="30" rows="5" placeholder="Tell me about your project"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">SEND
-                                    MESSAGE</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Contact End -->
 
 {% endblock %}
 

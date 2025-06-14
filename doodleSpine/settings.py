@@ -126,6 +126,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",  # Project-wide static files
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
 # For production - where collectstatic will copy files for deployment
 STATIC_ROOT = BASE_DIR / "staticfiles"
 

@@ -14,7 +14,7 @@
                 <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Storytelling Through Animation</h5>
                 <h1 class="display-1 text-capitalize text-white mb-4">Bringing Ideas to Life</h1>
                 <p class="mb-5 fs-5">Transform your books, brand, or message into engaging whiteboard animations that captivate your audience and tell your story visually.</p>
-                <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#services">Explore Services</a>
+                <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="{% url 'blog' %}">Explore Services</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Book Marketing</h5>
                 <h1 class="display-1 text-capitalize text-white mb-4">Animated Book Trailers</h1>
                 <p class="mb-5 fs-5">Turn your book into an animated trailer that grabs attention on social media and helps readers connect with your story.</p>
-                <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#services">See Examples</a>
+                <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="{% url 'blog' %}">See Examples</a>
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
                                 <span class="badge bg-primary me-2 mb-2">Animation</span>
                                 <span class="badge bg-primary me-2 mb-2">Marketing</span>
                             </div>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Portfolio</a>
+                            <a href="{% url 'portfolio' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                                 <span class="badge bg-primary me-2 mb-2">Trailers</span>
                                 <span class="badge bg-primary me-2 mb-2">Promotion</span>
                             </div>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">See Examples</a>
+                            <a href="{% url 'blog' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">See Examples</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="section-title text-start mb-5">
                     <h4 class="sub-title pe-3 mb-0">About The Doodle Spine</h4>
                     <h1 class="display-3 mb-4">Visual Storytelling With Purpose</h1>
-                    <p class="mb-4">I combine animation, design, and storytelling to help authors and brands communicate their messages in ways that resonate with their audience. Whether it's through whiteboard animations that explain complex ideas, book trailers that capture the essence of a story, or digital products that inspire and empower, my goal is to create work that matters.</p>
+                    <p class="mb-4">We combine animation, design, and storytelling to help authors and brands communicate their messages in ways that resonate with their audience. Whether it's through whiteboard animations that explain complex ideas, book trailers that capture the essence of a story, or digital products that inspire and empower, my goal is to create work that matters.</p>
                     <div class="mb-4">
                         <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Custom animations tailored to your brand voice</p>
                         <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Engaging book trailers that increase reader interest</p>
@@ -244,10 +244,7 @@
                 <div class="portfolio-item rounded">
                     <div class="portfolio-img rounded-top">
                         <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="Whiteboard animation project">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
-                        </div>
+                        
                     </div>
                     <div class="portfolio-content rounded-bottom bg-white p-4">
                         <h5 class="mb-3">Author Brand Animation</h5>
@@ -263,10 +260,7 @@
                 <div class="portfolio-item rounded">
                     <div class="portfolio-img rounded-top">
                         <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded-top" alt="Book trailer project">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
-                        </div>
+                      
                     </div>
                     <div class="portfolio-content rounded-bottom bg-white p-4">
                         <h5 class="mb-3">Fiction Book Trailer</h5>
@@ -282,10 +276,7 @@
                 <div class="portfolio-item rounded">
                     <div class="portfolio-img rounded-top">
                         <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded-top" alt="Digital product example">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
-                        </div>
+                    
                     </div>
                     <div class="portfolio-content rounded-bottom bg-white p-4">
                         <h5 class="mb-3">Goal Setting Journal</h5>

@@ -7,269 +7,68 @@
 
 {% block content %}
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Products</h1>
-                
-            </div>
-        </div>
-        <!-- Header End -->
-
-
-
-<!-- Product Categories -->
-<!-- <div class="container-fluid py-4 bg-light">
-    <div class="container">
-        <div class="row g-3 justify-content-center">
-            <div class="col-auto">
-                <a href="#" class="btn btn-outline-primary rounded-pill">All Products</a>
-            </div>
-            <div class="col-auto">
-                <a href="#" class="btn btn-outline-primary rounded-pill">Whiteboard Animations</a>
-            </div>
-            <div class="col-auto">
-                <a href="#" class="btn btn-outline-primary rounded-pill">Book Trailers</a>
-            </div>
-            <div class="col-auto">
-                <a href="#" class="btn btn-outline-primary rounded-pill">Digital Products</a>
-            </div>
-        </div>
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Products</h3>
+        <p class="text-white fs-5 mb-0 wow fadeInUp" data-wow-delay="0.2s">
+            Discover our unique range of digital products crafted to educate, entertain, and empower creatives, storytellers, and dreamers.
+        </p>
     </div>
-</div> -->
+</div>
+
+<!-- Header End -->
+
 
 <!-- Products Grid -->
 <div class="container-fluid py-5">
     <div class="container">
-        <div class="row g-4">
-            <!-- Product 1 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                <div class="card product-card h-100 border-0">
-                    <div class="badge bg-danger text-white position-absolute m-2">SALE</div>
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Whiteboard Animation Package">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Animation</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
+
+        {% if products %}
+            <!-- Vertical scroll only -->
+            <div class="scroll-container">
+                <div class="row g-4">
+                    {% for product in products %}
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" {% if forloop.counter0|divisibleby:4 %}data-wow-delay="0.{{ forloop.counter0|add:"1" }}s"{% endif %}>
+                        <div class="card product-card h-100 border-0">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">{{ product.category.name }}</span>
+                                </div>
+                                <h5 class="card-title">{{ product.title }}</h5>
+                                <p class="card-text">{{ product.description }}</p>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded">
+                                <div>
+                                    <span class="text-primary h4">${{ product.price }}</span>
+                                    {% if product.original_price and product.original_price > product.price %}
+                                        <small class="text-decoration-line-through text-muted ms-2">
+                                            ${{ product.original_price }}
+                                        </small>
+                                    {% endif %}
+                                    </div>
+                                    <a href="{{ product.link }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">Buy</a>
+                                </div>
+
                             </div>
-                        </div>
-                        <h5 class="card-title">Whiteboard Animation Package</h5>
-                        <p class="card-text">60-second engaging animation for your book or brand</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$199</span>
-                                <small class="text-decoration-line-through text-muted ms-2">$249</small>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
 
-            <!-- Product 2 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="card product-card h-100 border-0">
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Book Trailer Service">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Book Marketing</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Book Trailer Service</h5>
-                        <p class="card-text">Professional animated trailer for your book (90 seconds)</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$299</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mt-5 wow fadeInUp">
+                <a href="#" class="btn btn-primary btn-lg px-5 py-3">View All Products</a>
             </div>
-
-            <!-- Product 3 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="card product-card h-100 border-0">
-                    <div class="badge bg-success text-white position-absolute m-2">NEW</div>
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Creative Journaling Kit">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Digital Product</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Creative Journaling Kit</h5>
-                        <p class="card-text">100+ prompts and templates for daily inspiration</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$19.99</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
+        {% else %}
+            <div class="text-center py-5">
+                <h4 class="text-muted">No products added yet.</h4>
             </div>
+        {% endif %}
 
-            <!-- Product 4 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="card product-card h-100 border-0">
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Productivity Planner">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Digital Product</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Productivity Planner</h5>
-                        <p class="card-text">Daily/weekly planner templates for maximum efficiency</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$14.99</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                <div class="card product-card h-100 border-0">
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Animation Course">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Course</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">DIY Animation Course</h5>
-                        <p class="card-text">Learn to create your own whiteboard animations</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$97</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="card product-card h-100 border-0">
-                    <div class="badge bg-danger text-white position-absolute m-2">30% OFF</div>
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Author Branding Kit">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Templates</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Author Branding Kit</h5>
-                        <p class="card-text">Social media templates for authors (50+ designs)</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$29</span>
-                                <small class="text-decoration-line-through text-muted ms-2">$42</small>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="card product-card h-100 border-0">
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Side Hustle Guide">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Ebook</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Side Hustle Guide</h5>
-                        <p class="card-text">150-page guide to starting your creative side business</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$9.99</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="card product-card h-100 border-0">
-                    <div class="badge bg-success text-white position-absolute m-2">BESTSELLER</div>
-                    <img src="{% static 'img/about-2.jpg' %}" class="card-img-top" alt="Premium Animation Package">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-muted">Animation</span>
-                            <div class="text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Premium Animation Package</h5>
-                        <p class="card-text">2-minute animation with custom voiceover and music</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-primary h4">$399</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline-primary">buy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-5 wow fadeInUp">
-            <a href="#" class="btn btn-primary btn-lg px-5 py-3">View All Products</a>
-        </div>
     </div>
 </div>
+
 
 <!-- Features Section -->
 <div class="container-fluid bg-light py-5">
